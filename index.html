@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SiCepat — Jasa Kurir & Pengiriman</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+    :root{
+    --brand:#0d6efd;
+    --accent:#0b5ed7;
+    }
+    .hero{
+    background: linear-gradient(135deg, rgba(13,110,253,0.08), rgba(11,94,215,0.04));
+    min-height:70vh;
+    overflow:hidden;
+    }
+    .service-card{border-left:4px solid var(--brand)}
+    .feature-icon{font-size:1.75rem}
+    .cta-banner{background:linear-gradient(90deg,var(--brand),var(--accent));color:#fff}
+    footer a{color:rgba(255,255,255,0.85)}
+
+    /* Animations */
+    .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+    }
+    .fade-in-delay-1 { animation-delay: .3s; }
+    .fade-in-delay-2 { animation-delay: .6s; }
+    .fade-in-delay-3 { animation-delay: .9s; }
+
+    @keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+    .scale-hover {
+    transition: transform .3s ease;
+    }
+    .scale-hover:hover {
+    transform: scale(1.05);
+    }
+
+    .selectable label:hover {
+    background-color: #e9ecef;
+    }
+
+    #normalCard:checked + label {
+    background-color: #198754;
+    color: #fff;
+    }
+
+    #proCard:checked + label {
+    background-color: #0d6efd;   
+    color: #fff;
+    }
+
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fade-in sticky-top">
+    <div class="container">
+    <a class="navbar-brand fw-bold" href="#">SiCepat</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#services">Layanan</a></li>
+        <li class="nav-item"><a class="nav-link" href="#how">Cara Kerja</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pricing">Harga</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+        <li class="nav-item"><a class="btn btn-primary" href="#order">Pesan Sekarang</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+<header class="hero d-flex align-items-center">
+    <div class="container">
+    <div class="row align-items-center">
+        <div class="col-lg-6 fade-in fade-in-delay-1">
+        <h1 class="display-5 fw-bold">Pengiriman Cepat — Aman — Terjangkau</h1>
+        <p class="lead text-muted">SiCepat membantu bisnis dan individu mengirim paket door-to-door dengan pelacakan real-time dan asuransi pengiriman.</p>
+        <div class="d-flex gap-2 mt-4">
+            <a href="#order" class="btn btn-primary btn-lg scale-hover">Pesan Sekarang</a>
+            <a href="#services" class="btn btn-outline-secondary btn-lg scale-hover">Lihat Layanan</a>
+        </div>
+
+        <div class="mt-4 d-flex gap-4">
+            <div>
+            <h5 class="mb-0"><span class="fw-bold">99.8%</span></h5>
+            <small class="text-muted">Kepuasan Pelanggan</small>
+            </div>
+            <div>
+            <h5 class="mb-0"><span class="fw-bold">1.2jt+</span></h5>
+            <small class="text-muted">Paket Terkirim</small>
+            </div>
+        </div>
+        </div>
+        <div class="col-lg-6 d-none d-lg-block fade-in fade-in-delay-2">
+        <img src="C:\Homework\Belajar\PWEB\LandingPage\kurir.jpg" alt="kurir" class="img-fluid rounded shadow" style="max-height:420px; object-fit:cover">
+        </div>
+    </div>
+    </div>
+</header>
+
+<section id="services" class="py-5">
+    <div class="container">
+    <div class="text-center mb-4 fade-in">
+        <h2 class="fw-bold">Layanan Kami</h2>
+        <p class="text-muted">Pilihan layanan pengiriman yang fleksibel untuk kebutuhanmu.</p>
+    </div>
+    <div class="row g-4">
+        <div class="col-md-4 fade-in fade-in-delay-1">
+        <div class="card p-3 service-card h-100 scale-hover">
+            <div class="card-body">
+            <div class="d-flex align-items-start gap-3">
+                <div class="bg-light rounded-circle p-3"><i class="bi bi-bicycle feature-icon"></i></div>
+                <div>
+                <h5 class="card-title mb-1">Same-day Delivery</h5>
+                <p class="text-muted">Pengiriman di hari yang sama untuk wilayah operasional.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-4 fade-in fade-in-delay-2">
+        <div class="card p-3 service-card h-100 scale-hover">
+            <div class="card-body">
+            <div class="d-flex align-items-start gap-3">
+                <div class="bg-light rounded-circle p-3"><i class="bi bi-truck feature-icon"></i></div>
+                <div>
+                <h5 class="card-title mb-1">Reguler & Economis</h5>
+                <p class="text-muted">Pilihan hemat untuk pengiriman non-darurat dengan harga bersaing.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-4 fade-in fade-in-delay-3">
+        <div class="card p-3 service-card h-100 scale-hover">
+            <div class="card-body">
+            <div class="d-flex align-items-start gap-3">
+                <div class="bg-light rounded-circle p-3"><i class="bi bi-shield-check feature-icon"></i></div>
+                <div>
+                <h5 class="card-title mb-1">Asuransi Paket</h5>
+                <p class="text-muted">Perlindungan untuk paket bernilai dengan proses klaim cepat.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+    </div>
+    </div>
+</section>
+
+<section id="how" class="py-5 bg-light fade-in">
+    <div class="container">
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+        <h3 class="fw-bold">Cara Kerja</h3>
+        <ol class="mt-3">
+            <li class="mb-2"><strong>Pesan:</strong> Isi detail pengiriman di formulir cepat kami.</li>
+            <li class="mb-2"><strong>Penjemputan:</strong> Kurir menjemput paket sesuai jadwal.</li>
+            <li class="mb-2"><strong>Pelacakan:</strong> Lihat status real-time sampai paket diterima.</li>
+        </ol>
+        <a href="#order" class="btn btn-outline-primary mt-3 scale-hover">Buat Pengiriman</a>
+        </div>
+        <div class="col-lg-6 fade-in fade-in-delay-1">
+        <div class="card p-3 shadow-sm">
+            <div class="card-body">
+            <h6 class="mb-3">Estimasi Waktu</h6>
+            <div class="d-flex justify-content-between mb-2">
+                <small class="text-muted">Same-day</small>
+                <small class="fw-bold">3 - 8 jam</small>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+                <small class="text-muted">Reguler</small>
+                <small class="fw-bold">1 - 3 hari</small>
+            </div>
+            <div class="d-flex justify-content-between">
+                <small class="text-muted">Ekonomis</small>
+                <small class="fw-bold">2 - 5 hari</small>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section id="pricing" class="py-5 fade-in">
+    <div class="container">
+    <div class="text-center mb-4">
+        <h3 class="fw-bold">Paket & Harga</h3>
+        <p class="text-muted">Pilih paket sesuai kebutuhan — tanpa biaya tersembunyi.</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-4 fade-in fade-in-delay-1">
+        <div class="card h-100 text-center shadow-sm border-success scale-hover">
+            <div class="card-body">
+            <h5 class="card-title">Basic</h5>
+            <h2 class="fw-bold">Rp15.000</h2>
+            <p class="text-muted">Cocok untuk paket kecil & dokumen</p>
+            <ul class="list-unstyled mt-3 mb-4 text-muted">
+                <li>Pelacakan dasar</li>
+                <li>Asuransi Rp100.000</li>
+            </ul>
+            <a href="#order" class="btn btn-outline-success scale-hover">Pilih Basic</a>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-4 fade-in fade-in-delay-2">
+        <div class="card h-100 text-center shadow-sm border-primary scale-hover">
+            <div class="card-body">
+            <h5 class="card-title">Pro</h5>
+            <h2 class="fw-bold">Rp35.000</h2>
+            <p class="text-muted">Pilihan paling populer</p>
+            <ul class="list-unstyled mt-3 mb-4 text-muted">
+                <li>Pelacakan real-time</li>
+                <li>Asuransi Rp1.000.000</li>
+                <li>Prioritas penjemputan</li>
+            </ul>
+            <a href="#order" class="btn btn-outline-primary scale-hover">Pilih Pro</a>
+            </div>
+        </div>
+        </div>
+
+    </div>
+    </div>
+</section>
+
+<section class="cta-banner py-5 fade-in">
+    <div class="container d-flex justify-content-between align-items-center">
+    <div>
+        <h4 class="mb-1">Siap kirimkan paketmu sekarang?</h4>
+        <p class="mb-0 small">Dapatkan penjemputan cepat dan pelacakan sampai tujuan.</p>
+    </div>
+    <div>
+        <a href="#order" class="btn btn-light btn-lg scale-hover">Buat Pesanan</a>
+    </div>
+    </div>
+</section>
+
+<section id="order" class="py-5 fade-in">
+    <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+        <h3 class="fw-bold text-center mb-3">Formulir Pemesanan Cepat</h3>
+        <div class="card shadow-sm">
+    <div class="card-body">
+        <form id="orderForm">
+        <label class="form-label d-block">Tipe Paket</label>
+        <div class="row g-3 mb-3">
+            <div class="col-md-6">
+            <div class="card selectable text-center border-success">
+                <input type="radio" class="btn-check" name="tipeLayanan" id="normalCard" value="Normal" required>
+                <label class="btn w-100 p-5" for="normalCard">
+                <h6 class="fw-bold mb-1">Normal</h6>
+                </label>
+            </div>
+            </div>
+            <div class="col-md-6">
+            <div class="card selectable text-center border-primary">
+                <input type="radio" class="btn-check" name="tipeLayanan" id="proCard" value="Pro" required>
+                <label class="btn w-100 p-5" for="proCard">
+                <h6 class="fw-bold mb-1">Pro</h6>
+                </label>
+            </div>
+            </div>
+        </div>
+        <div class="row g-3">
+            <div class="col-md-6">
+            <label class="form-label">Nama Pengirim</label>
+            <input type="text" class="form-control" name="nama" required>
+            </div>
+            <div class="col-md-6">
+            <label class="form-label">No. Telepon</label>
+            <input type="tel" class="form-control" name="telepon" required>
+            </div>
+            <div class="col-12">
+            <label class="form-label">Alamat Penjemputan</label>
+            <input type="text" class="form-control" name="alamat_jemput" required>
+            </div>
+            <div class="col-12">
+            <label class="form-label">Alamat Tujuan</label>
+            <input type="text" class="form-control" name="alamat_tujuan" required>
+            </div>
+            <div class="col-md-4">
+            <label class="form-label">Jenis Layanan</label>
+            <select class="form-select" name="jenis" required>
+                <option value="">Pilih...</option>
+                <option>Same-day</option>
+                <option>Reguler</option>
+                <option>Ekonomis</option>
+            </select>
+            </div>
+            <div class="col-md-4">
+            <label class="form-label">Berat (kg)</label>
+            <input type="number" class="form-control" name="berat" min="0.1" step="0.1" value="0.5" required>
+            </div>
+            <div class="col-md-4">
+            <label class="form-label">Total Harga</label>
+            <input type="text" class="form-control text-end" name="alamat_jemput" id="harga" required readonly value="Rp0">
+            </div>
+            <div class="col-12">
+            <button type="submit" class="btn btn-primary w-100">Kirim Pesanan</button>
+            </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    <p class="text-muted text-center small mt-2">Kamu akan dihubungi oleh tim kami setelah pengiriman dikonfirmasi.</p>
+    </div>
+</div>
+</div>
+</section>
+
+<section class="py-5 bg-white fade-in">
+    <div class="container">
+    <div class="text-center mb-4">
+        <h4 class="fw-bold">Apa kata pelanggan</h4>
+    </div>
+    <div class="row g-4">
+        <div class="col-md-4 fade-in fade-in-delay-1">
+        <div class="card p-3 h-100 shadow-sm scale-hover">
+            <div class="card-body">
+            <p class="mb-2">"Cepat dan aman — paket sampai bahkan lebih cepat dari estimasi."</p>
+            <small class="text-muted">— Rina, Toko Online</small>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-4 fade-in fade-in-delay-2">
+        <div class="card p-3 h-100 shadow-sm scale-hover">
+            <div class="card-body">
+            <p class="mb-2">"Proses klaim mudah dan responsif."</p>
+            <small class="text-muted">— Budi, Pengusaha</small>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-4 fade-in fade-in-delay-3">
+        <div class="card p-3 h-100 shadow-sm scale-hover">
+            <div class="card-body">
+            <p class="mb-2">"Harga pas dan kurirnya ramah."</p>
+            <small class="text-muted">— Sinta, Blogger</small>
+            </div>
+        </div>
+        </div>
+
+    </div>
+    </div>
+    </section>
+
+<section id="hubungi-kami" class="py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="mb-4">Hubungi Kami</h2>
+        <p class="mb-5">Anda bisa menghubungi kami melalui media sosial berikut:</p>
+        <div class="d-flex justify-content-center gap-4">
+        
+        <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-success d-flex align-items-center gap-2  scale-hover">
+            <i class="bi bi-whatsapp fs-4"></i> WhatsApp
+        </a>
+
+        <a href="https://facebook.com/SiCepatOri" target="_blank" class="btn btn-primary d-flex align-items-center gap-2  scale-hover">
+            <i class="bi bi-facebook fs-4"></i> Facebook
+        </a>
+
+        <a href="https://instagram.com/SiCepatOfficial" target="_blank" class="btn btn-danger d-flex align-items-center gap-2  scale-hover">
+            <i class="bi bi-instagram fs-4"></i> Instagram
+        </a>
+
+        <a href="https://tiktok.com/@SiCepatOrigin" target="_blank" class="btn btn-dark d-flex align-items-center gap-2  scale-hover">
+            <i class="bi bi-tiktok fs-4"></i> TikTok
+        </a>
+
+        </div>
+    </div>
+</section>
+
+    <footer class="py-5 bg-dark text-white fade-in">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+            <h5>SiCepat</h5>
+            <p class="small">Solusi pengiriman cepat dan terpercaya untuk bisnis & personal.</p>
+            </div>
+            <div class="col-md-4">
+            <h6>Kontak</h6>
+            <p class="small mb-1">Email: support@sicepat.id</p>
+            <p class="small">Telephone: +62 813 8899 5423</p>
+            </div>
+            <div class="col-md-4 text-md-end">
+            <h6>Ikuti Kami</h6>
+            <a class="me-2" href="#"><i class="bi bi-instagram"></i></a>
+            <a class="me-2" href="#"><i class="bi bi-facebook"></i></a>
+            <a class="me-2" href="#"><i class="bi bi-twitter"></i></a>
+            </div>
+        </div>
+        <hr class="mt-4" style="border-color:rgba(255,255,255,0.06)">
+        <div class="text-center small">© 2025 SiCepat. Semua hak dilindungi.</div>
+        </div>
+    </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+            $("#orderForm").on("submit", function(e) {
+                e.preventDefault();
+
+                if (!this.checkValidity()) {
+                $(this).addClass("was-validated");
+                return;
+                }
+
+                const $btn = $(this).find('button[type="submit"]');
+                $btn.prop("disabled", true).text("Mengirim...");
+
+                setTimeout(() => {
+                $btn.prop("disabled", false).text("Kirim Pesanan");
+                alert("Terima kasih! Pesanan Anda telah diterima. Tim kami akan menghubungi Anda.");
+                this.reset();
+                }, 1200);
+            });
+            function hitungHarga(){ 
+                let packet_type = $('select[name="jenis"]').val();
+                console.log(packet_type)
+                if (packet_type === ""){
+                    $('#harga').val("Rp0");
+                    return
+                }
+                let ratio = 1;
+                if (packet_type === "Same-day") ratio = 1.2;
+                if (packet_type === "Ekonomis") ratio = 0.8;
+                let delivery_type = $('input[name="tipeLayanan"]:checked').val();
+                let berat = parseFloat($('input[name="berat"]').val()) || 0;
+                let hargaPerKg = 0;
+
+                if(delivery_type === "Normal") hargaPerKg = 15000;
+                if(delivery_type === "Pro") hargaPerKg = 35000;
+
+                let total = hargaPerKg * berat * ratio;
+                $('#harga').val(total > 0 ? "Rp" + total.toLocaleString("id-ID") : "Rp0");
+            }
+
+            $('input[name="tipeLayanan"], input[name="berat"], select[name="jenis"]').on('change input', hitungHarga);
+        </script>
+    </body>
+</html>
